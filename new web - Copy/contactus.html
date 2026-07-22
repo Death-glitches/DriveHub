@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+
+<head>
+  <title>Contact Us | Car Showcase</title>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <meta name="robots" content="index,follow">
+  <meta name="generator" content="GrapesJS Studio">
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <script id="tailwind-config">
+    tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "inverse-surface": "#e5e2e1",
+                      "surface": "#131313",
+                      "on-error": "#690005",
+                      "on-primary-fixed": "#410004",
+                      "secondary": "#c8c6c5",
+                      "on-primary": "#68000a",
+                      "error": "#ffb4ab",
+                      "inverse-on-surface": "#313030",
+                      "on-surface-variant": "#e4beba",
+                      "surface-bright": "#393939",
+                      "surface-container-lowest": "#0e0e0e",
+                      "on-tertiary-container": "#00285d",
+                      "outline": "#ab8986",
+                      "tertiary-fixed-dim": "#adc6ff",
+                      "on-primary-container": "#5c0008",
+                      "on-secondary-fixed-variant": "#474746",
+                      "secondary-fixed-dim": "#c8c6c5",
+                      "surface-container-low": "#1c1b1b",
+                      "on-primary-fixed-variant": "#930013",
+                      "secondary-container": "#474746",
+                      "on-background": "#e5e2e1",
+                      "surface-dim": "#131313",
+                      "on-surface": "#e5e2e1",
+                      "primary": "#ffb3ad",
+                      "on-secondary": "#313030",
+                      "background": "#131313",
+                      "primary-fixed": "#ffdad7",
+                      "secondary-fixed": "#e5e2e1",
+                      "surface-tint": "#ffb3ad",
+                      "surface-container-high": "#2a2a2a",
+                      "on-tertiary-fixed-variant": "#004395",
+                      "tertiary": "#adc6ff",
+                      "on-secondary-fixed": "#1c1b1b",
+                      "on-secondary-container": "#b7b5b4",
+                      "tertiary-container": "#4d8eff",
+                      "on-tertiary-fixed": "#001a42",
+                      "surface-variant": "#353534",
+                      "primary-container": "#ff5451",
+                      "surface-container": "#201f1f",
+                      "primary-fixed-dim": "#ffb3ad",
+                      "error-container": "#93000a",
+                      "surface-container-highest": "#353534",
+                      "tertiary-fixed": "#d8e2ff",
+                      "outline-variant": "#5b403e",
+                      "on-tertiary": "#002e6a",
+                      "inverse-primary": "#b91a24",
+                      "on-error-container": "#ffdad6"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.125rem",
+                      "lg": "0.25rem",
+                      "xl": "0.5rem",
+                      "full": "0.75rem"
+              },
+              "spacing": {
+                      "base": "8px",
+                      "margin-desktop": "64px",
+                      "gutter": "24px",
+                      "container-max": "1440px",
+                      "margin-mobile": "20px"
+              },
+              "fontFamily": {
+                      "body-md": ["Inter"],
+                      "label-sm": ["Inter"],
+                      "display-lg-mobile": ["Montserrat"],
+                      "headline-xl": ["Montserrat"],
+                      "display-lg": ["Montserrat"],
+                      "body-lg": ["Inter"],
+                      "headline-lg": ["Montserrat"]
+              },
+              "fontSize": {
+                      "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                      "label-sm": ["12px", {"lineHeight": "1", "letterSpacing": "0.1em", "fontWeight": "600"}],
+                      "display-lg-mobile": ["40px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                      "headline-xl": ["48px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                      "display-lg": ["72px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                      "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                      "headline-lg": ["32px", {"lineHeight": "1.3", "fontWeight": "600"}]
+              }
+            },
+          },
+        }
+  </script>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+    }
+
+    :root {
+      --gjs-t-color-primary: #cf549e;
+      --gjs-t-color-secondary: #b9227d;
+      --gjs-t-color-accent: #ffb347;
+      --gjs-t-color-success: #28a745;
+      --gjs-t-color-warning: #ffc107;
+      --gjs-t-color-error: #dc3545;
+    }
+
+    body {
+      background-color: #121212;
+      font-family: system-ui, sans-serif;
+      color: #e5e2e1;
+      scroll-behavior: smooth;
+      margin: 0;
+    }
+
+    .head {
+      padding: 50px 50px 35px;
+    }
+
+    .logo {
+      height: 50px;
+      display: block;
+      margin: 0 auto;
+    }
+
+    .card {
+      max-width: 700px;
+      padding: 40px 45px;
+      background-color: white;
+      border-radius: 15px;
+      margin: 0 auto;
+    }
+
+    .title {
+      margin: 0;
+      text-align: center;
+    }
+
+    .gjs-t-body {
+      background-color: inherit;
+      color: inherit;
+      font-size: 1rem;
+      line-height: 1.75rem;
+    }
+
+    .subtitle {
+      text-align: center;
+      margin: 0;
+      padding: 25px 0;
+    }
+
+    .paragraph {
+      line-height: 1.5;
+      margin-bottom: 40px;
+    }
+
+    .link {
+      color: #af4e8a;
+      text-decoration: none;
+      font-size: 13px;
+    }
+
+    .footer {
+      margin-top: 30px;
+      text-align: center;
+    }
+
+    .gjs-t-h1 {
+      color: var(--gjs-t-color-secondary);
+      font-size: 1.5rem;
+      line-height: 2.5rem;
+    }
+
+    .button {
+      display: block;
+      padding: 0.5rem 1rem;
+      text-decoration: none;
+      text-align: center;
+      border-width: 0;
+    }
+
+    .gjs-t-h2 {
+      color: #601843;
+      font-size: 1.2rem;
+      line-height: 1.75rem;
+    }
+
+    .gjs-t-button {
+      background-color: var(--gjs-t-color-primary);
+      color: white;
+      border-radius: 0.3rem;
+    }
+
+    .gjs-t-link {
+      color: var(--gjs-t-color-primary);
+      text-decoration: underline;
+    }
+
+    .gjs-t-border {
+      border-radius: 0.3rem;
+      border-color: #e0e0e0;
+    }
+
+    .glass-effect {
+      backdrop-filter: blur(20px);
+      background: rgba(0, 0, 0, 0.6);
+    }
+
+    .card-transition {
+      transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .card-hover:hover {
+      transform: translateY(-8px) scale(1.02);
+      box-shadow: 0 20px 40px rgba(255, 179, 173, 0.08);
+      border-color: rgba(255, 179, 173, 0.3);
+    }
+
+    .racing-red-glow:hover {
+      box-shadow: 0 0 15px rgba(255, 84, 81, 0.5);
+    }
+
+    .custom-scrollbar::-webkit-scrollbar {
+      height: 4px;
+    }
+
+    .custom-scrollbar::-webkit-scrollbar-track {
+      background: rgba(255, 255, 255, 0.05);
+    }
+
+    .custom-scrollbar::-webkit-scrollbar-thumb {
+      background: #ff5451;
+      border-radius: 2px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    .glass-panel {
+      background: rgba(26, 26, 26, 0.6);
+      backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .racing-glow:hover {
+      box-shadow: 0 0 20px rgba(255, 84, 81, 0.4);
+    }
+
+    .reveal-text {
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+      animation: reveal 1.2s ease-out forwards;
+    }
+
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL'0, 'wght'400, 'GRAD'0, 'opsz'24;
+    }
+
+    .glass-card {
+      background: rgba(26, 26, 26, 0.6);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .text-glow {
+      text-shadow: 0 0 15px rgba(255, 179, 173, 0.3);
+    }
+
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: #131313;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: #353534;
+      border-radius: 4px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: #ab8986;
+    }
+
+    .input-glow:focus {
+      box-shadow: 0 0 15px rgba(255, 179, 173, 0.3);
+    }
+
+    #i8zd7og {
+      background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAlfv1YQOdZzTTAJadLN4tC24ol_peFrpmYOvwezLB9TA2QoprB8gAur9xWURO8J3VIexoCqrv7_1dWGjtrqiKx1tB5FaIQLm7vUZ9Pg_xgBAAqM0LCV3-L4jXTZjxPYHW1PNO_Axh_kDwXdX69NA8LSZEGy5ifMK8-_xQ8TWNTw7g2CYF2-7g82GoiXcwgM_CLuYGADNXlLGI6zezRw-LPPTdKXQDT06hkmbUHJrvp3koUlu6fh0A0jhuNOPn5iWyzxVbJvys1-zgC');
+    }
+
+    #i9riav6 {
+      margin-top: 0px;
+      margin-right: 0px;
+      margin-bottom: 0px;
+      margin-left: 0px;
+      padding-top: 0px;
+      padding-right: 0px;
+      padding-bottom: 0px;
+      padding-left: 0px;
+    }
+
+    @keyframes reveal {
+      from {
+        transform: translateY(100%);
+      }
+
+      to {
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+
+<body id="ik6i"
+  class="bg-surface text-on-surface font-body-md selection:bg-primary-container selection:text-on-primary-container">
+  <!-- Top Navigation Bar -->
+  <header
+    class="sticky top-0 w-full z-50 bg-surface/60 backdrop-blur-xl border-b border-white/10 shadow-2xl shadow-primary/5">
+    <nav class="flex justify-between items-center max-w-container-max mx-auto px-margin-desktop h-20">
+      <div class="font-headline-lg text-headline-lg tracking-tighter text-on-surface" id="ihmf9uk">DriveHub</div>
+      <div class="hidden md:flex items-center space-x-8"><a href="Index.html"
+          class="text-on-surface/70 hover:text-on-surface transition-colors duration-300 font-body-md text-body-md">Home</a><a
+          href="cars.html"
+          class="text-on-surface/70 hover:text-on-surface transition-colors duration-300 font-body-md text-body-md">Cars</a>
+          <a href="bikes.html"
+          class="text-on-surface/70 hover:text-on-surface transition-colors duration-300 font-body-md text-body-md nav-underline"
+          id="iqzpt">Bikes</a>
+          <a
+          href="about.html"
+          class="text-on-surface/70 hover:text-on-surface transition-colors duration-300 font-body-md text-body-md">About</a><a
+          href="contactus.html" class="text-primary font-bold border-b-2 border-primary pb-1 font-body-md text-body-md">Contact</a>
+      </div>
+    </nav>
+  </header>
+  <main class="min-h-screen relative overflow-hidden">
+    <!-- Ambient Background Effect -->
+    <div class="absolute inset-0 pointer-events-none opacity-20 overflow-hidden">
+
+    </div><!-- Hero Section -->
+    <section class="relative pt-24 pb-16 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto"
+      id="i0vrenr">
+      <div class="md:w-2/3">
+        <span class="font-label-sm text-label-sm text-primary uppercase tracking-[0.2em] mb-4 block">Get in Touch</span>
+        <h1 class="font-display-lg text-display-lg-mobile md:text-display-lg mb-6 leading-tight">
+          ENGINEERED <br/> FOR DIALOGUE.
+        </h1>
+        <p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl">
+          Whether you’re looking to acquire a rare masterpiece or require technical support for your fleet, our elite
+          team in Stuttgart is ready to assist.
+        </p>
+      </div>
+    </section><!-- Main Content: Two Column Layout -->
+    <section class="relative px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto pb-32" id="ijo1slf">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-start" id="i9riav6">
+        <!-- Left Column: Contact Form -->
+        <!-- Right Column: Company Info & Social -->
+        <div class="lg:col-span-5 space-y-gutter">
+          <!-- Image Card -->
+          <div class="h-64 rounded-xl overflow-hidden relative group">
+            <div
+              data-alt="A cinematic, low-angle shot of a sleek carbon fiber building exterior at night in Stuttgart. The architecture is sharp and modern with glowing red interior lights peeking through tinted glass. The atmosphere is high-end, futuristic, and exclusive, mirroring the luxury car brand's design language."
+              class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110"
+              id="i8zd7og"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-surface to-transparent opacity-60" id="ipg3a4k"></div>
+            <div class="absolute bottom-6 left-6">
+              <p class="font-headline-lg text-headline-lg">HQ STUTTGART</p>
+            </div>
+          </div><!-- Info Details -->
+          <div class="glass-panel p-8 rounded-xl space-y-8">
+            <div class="flex items-start gap-4">
+              <div class="bg-surface-variant p-3 rounded-lg">
+                <span class="material-symbols-outlined text-primary">location_on</span></div>
+              <div>
+                <p class="font-label-sm text-label-sm text-primary uppercase mb-1">Address</p>
+                <p class="font-body-md text-body-md text-on-surface">Ave Maria College, Vallesville-Fatima,<br/>Liloy, Zamboanga del Norte, Liloy, Philippines</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-4">
+              <div class="bg-surface-variant p-3 rounded-lg">
+                <span class="material-symbols-outlined text-primary">call</span></div>
+              <div>
+                <p class="font-label-sm text-label-sm text-primary uppercase mb-1">Phone</p>
+                <p class="font-body-md text-body-md text-on-surface">09555748231</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-4">
+              <div class="bg-surface-variant p-3 rounded-lg">
+                <span class="material-symbols-outlined text-primary">mail</span></div>
+              <div>
+                <p class="font-label-sm text-label-sm text-primary uppercase mb-1">Email</p>
+                <p class="font-body-md text-body-md text-on-surface">rofino1234@gmail.com</p>
+              </div>
+            </div>
+          </div><!-- Social Media -->
+        </div>
+      </div>
+    </section><!-- Map Section -->
+  </main><!-- Footer -->
+  <script>
+    // Form Submission Logic
+        document.getElementById('contactForm')?.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const btn = e.target.querySelector('button');
+            const originalText = btn.innerText;
+            
+            btn.innerText = 'SENDING...';
+            btn.classList.add('opacity-50');
+            btn.disabled = true;
+
+            setTimeout(() => {
+                btn.innerText = 'SENT SUCCESSFULLY';
+                btn.classList.remove('bg-primary-container');
+                btn.classList.add('bg-green-600');
+                
+                setTimeout(() => {
+                    btn.innerText = originalText;
+                    btn.classList.remove('bg-green-600', 'opacity-50');
+                    btn.classList.add('bg-primary-container');
+                    btn.disabled = false;
+                    e.target.reset();
+                }, 3000);
+            }, 1500);
+        });
+
+        // Hover Effect on Form Fields
+        const inputs = document.querySelectorAll('input, textarea, select');
+        inputs.forEach(input => {
+            input.addEventListener('focus', () => {
+                input.parentElement.querySelector('label').classList.replace('text-on-surface-variant', 'text-primary');
+            });
+            input.addEventListener('blur', () => {
+                input.parentElement.querySelector('label').classList.replace('text-primary', 'text-on-surface-variant');
+            });
+        });
+  </script>
+</body>
+
+</html>

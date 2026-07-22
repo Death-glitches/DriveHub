@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+
+<head>
+  <title>Porsche 911 GT3 | Car Showcase</title>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <meta name="robots" content="index,follow">
+  <meta name="generator" content="GrapesJS Studio">
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <!-- Tailwind Configuration -->
+  <script id="tailwind-config">
+    tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                "inverse-surface": "#e5e2e1",
+                "surface": "#131313",
+                "on-error": "#690005",
+                "on-primary-fixed": "#410004",
+                "secondary": "#c8c6c5",
+                "on-primary": "#68000a",
+                "error": "#ffb4ab",
+                "inverse-on-surface": "#313030",
+                "on-surface-variant": "#e4beba",
+                "surface-bright": "#393939",
+                "surface-container-lowest": "#0e0e0e",
+                "on-tertiary-container": "#00285d",
+                "outline": "#ab8986",
+                "tertiary-fixed-dim": "#adc6ff",
+                "on-primary-container": "#5c0008",
+                "on-secondary-fixed-variant": "#474746",
+                "secondary-fixed-dim": "#c8c6c5",
+                "surface-container-low": "#1c1b1b",
+                "on-primary-fixed-variant": "#930013",
+                "secondary-container": "#474746",
+                "on-background": "#e5e2e1",
+                "surface-dim": "#131313",
+                "on-surface": "#e5e2e1",
+                "primary": "#ffb3ad",
+                "on-secondary": "#313030",
+                "background": "#131313",
+                "primary-fixed": "#ffdad7",
+                "secondary-fixed": "#e5e2e1",
+                "surface-tint": "#ffb3ad",
+                "surface-container-high": "#2a2a2a",
+                "on-tertiary-fixed-variant": "#004395",
+                "tertiary": "#adc6ff",
+                "on-secondary-fixed": "#1c1b1b",
+                "on-secondary-container": "#b7b5b4",
+                "tertiary-container": "#4d8eff",
+                "on-tertiary-fixed": "#001a42",
+                "surface-variant": "#353534",
+                "primary-container": "#ff5451",
+                "surface-container": "#201f1f",
+                "primary-fixed-dim": "#ffb3ad",
+                "error-container": "#93000a",
+                "surface-container-highest": "#353534",
+                "tertiary-fixed": "#d8e2ff",
+                "outline-variant": "#5b403e",
+                "on-tertiary": "#002e6a",
+                "inverse-primary": "#b91a24",
+                "on-error-container": "#ffdad6"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.125rem",
+                "lg": "0.25rem",
+                "xl": "0.5rem",
+                "full": "0.75rem"
+            },
+            "spacing": {
+                "base": "8px",
+                "margin-desktop": "64px",
+                "gutter": "24px",
+                "container-max": "1440px",
+                "margin-mobile": "20px"
+            },
+            "fontFamily": {
+                "body-md": ["Inter"],
+                "label-sm": ["Inter"],
+                "display-lg-mobile": ["Montserrat"],
+                "headline-xl": ["Montserrat"],
+                "display-lg": ["Montserrat"],
+                "body-lg": ["Inter"],
+                "headline-lg": ["Montserrat"]
+            },
+            "fontSize": {
+                "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                "label-sm": ["12px", {"lineHeight": "1", "letterSpacing": "0.1em", "fontWeight": "600"}],
+                "display-lg-mobile": ["40px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                "headline-xl": ["48px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                "display-lg": ["72px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                "headline-lg": ["32px", {"lineHeight": "1.3", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+  </script>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+    }
+
+    :root {
+      --gjs-t-color-primary: #cf549e;
+      --gjs-t-color-secondary: #b9227d;
+      --gjs-t-color-accent: #ffb347;
+      --gjs-t-color-success: #28a745;
+      --gjs-t-color-warning: #ffc107;
+      --gjs-t-color-error: #dc3545;
+    }
+
+    body {
+      background-color: #121212;
+      font-family: system-ui, sans-serif;
+      color: #e5e2e1;
+      scroll-behavior: smooth;
+      margin: 0;
+    }
+
+    .head {
+      padding: 50px 50px 35px;
+    }
+
+    .logo {
+      height: 50px;
+      display: block;
+      margin: 0 auto;
+    }
+
+    .card {
+      max-width: 700px;
+      padding: 40px 45px;
+      background-color: white;
+      border-radius: 15px;
+      margin: 0 auto;
+    }
+
+    .title {
+      margin: 0;
+      text-align: center;
+    }
+
+    .gjs-t-body {
+      background-color: inherit;
+      color: inherit;
+      font-size: 1rem;
+      line-height: 1.75rem;
+    }
+
+    .subtitle {
+      text-align: center;
+      margin: 0;
+      padding: 25px 0;
+    }
+
+    .paragraph {
+      line-height: 1.5;
+      margin-bottom: 40px;
+    }
+
+    .link {
+      color: #af4e8a;
+      text-decoration: none;
+      font-size: 13px;
+    }
+
+    .footer {
+      margin-top: 30px;
+      text-align: center;
+    }
+
+    .gjs-t-h1 {
+      color: var(--gjs-t-color-secondary);
+      font-size: 1.5rem;
+      line-height: 2.5rem;
+    }
+
+    .button {
+      display: block;
+      padding: 0.5rem 1rem;
+      text-decoration: none;
+      text-align: center;
+      border-width: 0;
+    }
+
+    .gjs-t-h2 {
+      color: #601843;
+      font-size: 1.2rem;
+      line-height: 1.75rem;
+    }
+
+    .gjs-t-button {
+      background-color: var(--gjs-t-color-primary);
+      color: white;
+      border-radius: 0.3rem;
+    }
+
+    .gjs-t-link {
+      color: var(--gjs-t-color-primary);
+      text-decoration: underline;
+    }
+
+    .gjs-t-border {
+      border-radius: 0.3rem;
+      border-color: #e0e0e0;
+    }
+
+    .glass-effect {
+      backdrop-filter: blur(20px);
+      background: rgba(0, 0, 0, 0.6);
+    }
+
+    .card-transition {
+      transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .card-hover:hover {
+      transform: translateY(-8px) scale(1.02);
+      box-shadow: 0 20px 40px rgba(255, 179, 173, 0.08);
+      border-color: rgba(255, 179, 173, 0.3);
+    }
+
+    .racing-red-glow:hover {
+      box-shadow: 0 0 15px rgba(255, 84, 81, 0.5);
+    }
+
+    .custom-scrollbar::-webkit-scrollbar {
+      height: 4px;
+    }
+
+    .custom-scrollbar::-webkit-scrollbar-track {
+      background: rgba(255, 255, 255, 0.05);
+    }
+
+    .custom-scrollbar::-webkit-scrollbar-thumb {
+      background: #ff5451;
+      border-radius: 2px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    .glass-panel {
+      background: rgba(19, 19, 19, 0.6);
+      backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .racing-glow:hover {
+      box-shadow: 0 0 20px rgba(255, 84, 81, 0.4);
+    }
+
+    .reveal-text {
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+      animation: reveal 1.2s ease-out forwards;
+    }
+
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL'0, 'wght'400, 'GRAD'0, 'opsz'24;
+    }
+
+    #itz3dn6 {
+      background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBIizXUaabr3SVu3c6tfVcbNAgYBDeski76BnhLIU69-sHouCtK3eGw_gMzEXLk6e2D9zkCjQSqGX9dA5JfEuraCooynqNcIrNSoShcOJ18CxomDtnJGU3Bn-ZTlsODEvN-6HweFW_PY8EqTtkjBEVLHuJcUEBZiLZGJZ3jav1qVjExaYEwSMd4RHquIxaZBPGbqN8xDzZvPHmX3I2RN77_5DfQY_IeeUaSPdxFEcEAgSTFAn7ESvLY7WA01MviK4Sw07s6cfFEJVcg');
+    }
+
+    #iqrjqiw {
+      font-variation-settings: 'FILL'1;
+    }
+
+    #i9xfo93 {
+      font-variation-settings: 'FILL'1;
+    }
+
+    #iwyz8wg {
+      font-variation-settings: 'FILL'1;
+    }
+
+    #ia10gpk {
+      background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAVVxh5wcx7Zov0J_dPY25GxLh4ry91g7n30bZ0YmtxtM8PayVcutJkr8JSH5SvEDpJQIZynD0jFbAcxZuU408pfKJxm6_-oZjaPEERU_PLbhnf3o5r4Tb70bPHk7ihnHI8fPIACpaedAfUBFyN8DQ79_VulKfi9MGRrWCMx9q5HfRPB59Z2W7Gaaqg7BJTHZaZ6VMU8CVbZ-CDtK9XMrDeIEDo5k7WcjylQ0kbcurrY4Xat0W08mFR5hNJqo8cOJPBe0HUB6ydHIb-');
+    }
+
+    #ixadweq {
+      background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuB_G3dulogrTz-v8T947RVGrvHEAsHg-eSIUzGFDU3KistRfA4GVwZz0x-ex2bEFkI8UyYF5tlTdTe6IiAMIBtxsG7b9qGJcKofI4n-K1U-2jti4xDgmiH3cVoXVMCCrbAtgSZJ8anXCKxgkdopivEPB2LxEJGo2FQsoXPzpN3AvkC6sMwbNFIspmpte31aEYeBYZLHP_nd8bvrmv75hYJLzsq0_XBvQsnxhncgXsa2DXXIPeoU6Ey49iWISJXfMHYi0yg1zbWMR2v0');
+    }
+
+    #issbesm {
+      background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuA1R7CZzvN9IBH0gPbIEcRHQW_CUbsxJA7HmqcaWLt2lCKhanpCTgOia0AgYdBChS5g_Vu9mUQ-ueN94RwpCKefr0GT8Nlri8HHzyfWY7WIaYlwSBKvJpRTLhcC8o0NGRuheQ6UgMeSfizzYSqMEHpT5lidDPMpEu941uXBiJWgG5DJggHd-gzCkh1gjs6enXjF1VgaPG8zrkayXB_oavDX4IUKNYaZQbmC574JkpwsbEBYIgy9JWo3Khv0iDZkZFsdS2IFBEqLlIkw');
+    }
+
+    @keyframes reveal {
+      from {
+        transform: translateY(100%);
+      }
+
+      to {
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+
+<body id="ik6i" class="font-body-md text-body-md overflow-x-hidden">
+  <!-- TopNavBar -->
+  <nav
+    class="sticky top-0 w-full z-50 bg-surface/60 backdrop-blur-xl border-b border-white/10 shadow-2xl shadow-primary/5 h-20">
+    <div class="flex justify-between items-center max-w-container-max mx-auto px-margin-desktop h-full">
+      <div class="font-headline-lg text-headline-lg tracking-tighter text-on-surface" id="ide96ro">DriveHub</div>
+      <div class="hidden md:flex gap-8 items-center"><a href="#"
+          class="text-on-surface/70 hover:text-on-surface transition-colors duration-300 font-body-md text-body-md">Home</a><a
+          href="#" class="text-primary font-bold border-b-2 border-primary pb-1 font-body-md text-body-md">Cars</a><a
+          href="#"
+          class="text-on-surface/70 hover:text-on-surface transition-colors duration-300 font-body-md text-body-md">About</a><a
+          href="#"
+          class="text-on-surface/70 hover:text-on-surface transition-colors duration-300 font-body-md text-body-md">Contact</a>
+      </div>
+    </div>
+  </nav>
+  <main>
+    <!-- Hero Section: High-Res Header -->
+    <section class="relative h-[921px] w-full overflow-hidden">
+      <div class="absolute inset-0 z-0">
+        <div
+          data-alt="A sleek, high-performance silver Porsche 911 GT3 captured at dusk on a modern, coastal highway. The car's sharp aerodynamic lines and large rear wing are illuminated by dramatic, low-angle cinematic lighting. The atmosphere is nocturnal and exclusive, with deep shadows and cool blue-toned ambient light reflecting off the metallic body. Minimalist and technologically advanced aesthetic."
+          class="w-full h-full bg-cover bg-center" id="itz3dn6"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-surface via-surface/40 to-transparent"></div>
+      </div>
+      <div class="relative z-10 h-full flex flex-col justify-end max-w-container-max mx-auto px-margin-desktop pb-24"
+        id="ikwej8h">
+        <div class="overflow-hidden mb-2">
+          <span class="inline-block text-primary font-label-sm text-label-sm uppercase tracking-widest reveal-text">The Icon of Performance</span>
+        </div>
+        <h1 class="font-display-lg text-display-lg-mobile md:text-display-lg tracking-tighter mb-4 leading-none">
+          Porsche 911 GT3
+        </h1>
+        <div class="flex flex-wrap gap-8 items-center mt-6">
+          <div class="flex flex-col">
+            <span class="text-on-surface-variant font-label-sm text-label-sm uppercase">Power</span><span class="font-headline-lg text-headline-lg text-on-surface">502 hp</span>
+          </div>
+          <div class="w-px h-12 bg-white/10"></div>
+          <div class="flex flex-col">
+            <span class="text-on-surface-variant font-label-sm text-label-sm uppercase">0-100 km/h</span><span class="font-headline-lg text-headline-lg text-on-surface">3.4s</span>
+          </div>
+          <div class="w-px h-12 bg-white/10"></div>
+          <div class="flex flex-col">
+            <span class="text-on-surface-variant font-label-sm text-label-sm uppercase">Starting at</span><span class="font-headline-lg text-headline-lg text-primary">$182,900</span>
+          </div>
+        </div>
+      </div>
+    </section><!-- Overview & Specs Bento Grid -->
+    <section class="py-24 bg-surface">
+      <div class="max-w-container-max mx-auto px-margin-desktop">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+          <!-- Brief Overview -->
+          <div class="lg:col-span-7 flex flex-col justify-center">
+            <h2 class="font-headline-xl text-headline-xl mb-8">Engineered for
+              <br/><span class="text-primary">The Purist.</span></h2>
+            <p class="font-body-lg text-body-lg text-on-surface/80 leading-relaxed max-w-2xl">
+              The 2024 Porsche 911 GT3 remains the benchmark for naturally aspirated performance. Born from the
+              racetrack and honed for the street, it features a 4.0-liter flat-six engine that screams to a 9,000 rpm
+              redline. Every curve is functional, every gram is accounted for, providing a visceral connection between
+              driver and machine that has defined the GT3's heritage for decades.
+            </p><!-- Key Features List -->
+            <div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">
+              <div class="flex items-center gap-3 p-4 bg-surface-container-low rounded-lg border border-white/5">
+                <span class="material-symbols-outlined text-primary" id="iqrjqiw">circle</span><span class="font-label-sm text-label-sm uppercase">Ceramic Brakes</span>
+              </div>
+              <div class="flex items-center gap-3 p-4 bg-surface-container-low rounded-lg border border-white/5">
+                <span class="material-symbols-outlined text-primary" id="i9xfo93">layers</span><span class="font-label-sm text-label-sm uppercase">Carbon Fiber Roof</span>
+              </div>
+              <div class="flex items-center gap-3 p-4 bg-surface-container-low rounded-lg border border-white/5">
+                <span class="material-symbols-outlined text-primary" id="iwyz8wg">heat_pump</span><span class="font-label-sm text-label-sm uppercase">Sport Exhaust</span>
+              </div>
+            </div>
+          </div><!-- Specs Table/Grid -->
+          <div class="lg:col-span-5 bg-surface-container-lowest p-8 rounded-xl border border-white/10 shadow-2xl">
+            <h3 class="font-headline-lg text-headline-lg mb-8 border-b border-white/10 pb-4">Specifications</h3>
+            <div class="space-y-4">
+              <div class="flex justify-between items-center py-2 border-b border-white/5">
+                <span class="text-on-surface-variant font-body-md text-body-md">Brand</span><span class="font-body-md text-body-md text-on-surface">Porsche</span>
+              </div>
+              <div class="flex justify-between items-center py-2 border-b border-white/5">
+                <span class="text-on-surface-variant font-body-md text-body-md">Model</span><span class="font-body-md text-body-md text-on-surface">911 GT3</span>
+              </div>
+              <div class="flex justify-between items-center py-2 border-b border-white/5">
+                <span class="text-on-surface-variant font-body-md text-body-md">Year</span><span class="font-body-md text-body-md text-on-surface">2024</span>
+              </div>
+              <div class="flex justify-between items-center py-2 border-b border-white/5">
+                <span class="text-on-surface-variant font-body-md text-body-md">Engine</span><span class="font-body-md text-body-md text-on-surface">4.0L Flat-6</span>
+              </div>
+              <div class="flex justify-between items-center py-2 border-b border-white/5">
+                <span class="text-on-surface-variant font-body-md text-body-md">Torque</span><span class="font-body-md text-body-md text-on-surface">346 lb-ft</span>
+              </div>
+              <div class="flex justify-between items-center py-2 border-b border-white/5">
+                <span class="text-on-surface-variant font-body-md text-body-md">Transmission</span><span class="font-body-md text-body-md text-on-surface">7-speed PDK</span>
+              </div>
+              <div class="flex justify-between items-center py-2 border-b border-white/5">
+                <span class="text-on-surface-variant font-body-md text-body-md">Drivetrain</span><span class="font-body-md text-body-md text-on-surface">RWD</span>
+              </div>
+              <div class="flex justify-between items-center py-2 border-b border-white/5">
+                <span class="text-on-surface-variant font-body-md text-body-md">Fuel Type</span><span class="font-body-md text-body-md text-on-surface">Premium</span>
+              </div>
+              <div class="flex justify-between items-center py-2 border-b border-white/5">
+                <span class="text-on-surface-variant font-body-md text-body-md">Seating</span><span class="font-body-md text-body-md text-on-surface">2</span>
+              </div>
+              <div class="flex justify-between items-center py-2">
+                <span class="text-on-surface-variant font-body-md text-body-md">Top Speed</span><span class="font-body-md text-body-md text-on-surface">197 mph</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section><!-- CTA Action Section -->
+    <!-- Secondary Image Gallery -->
+    <section class="pb-24">
+      <div class="max-w-container-max mx-auto px-margin-desktop">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-gutter h-[600px]">
+          <div
+            data-alt="A detailed close-up shot of the Porsche 911 GT3 steering wheel and digital dashboard. The cockpit is finished in Alcantara and carbon fiber with red contrast stitching. The lighting is focused and technical, highlighting the high-precision gauges and mechanical details of the interior. Professional automotive interior photography with a luxury, dark-mode aesthetic."
+            class="h-full bg-cover bg-center rounded-xl border border-white/5" id="ia10gpk"></div>
+          <div class="grid grid-rows-2 gap-gutter h-full">
+            <div
+              data-alt="A side profile view of the Porsche 911 GT3 showing its aggressive aerodynamic silhouette and center-lock wheels. The car is parked against a minimalist concrete wall with dramatic shadows and highlights. The silver paint reflects the surrounding industrial environment, emphasizing the car's engineering precision and performance-oriented design."
+              class="bg-cover bg-center rounded-xl border border-white/5" id="ixadweq"></div>
+            <div
+              data-alt="The rear view of a Porsche 911 GT3 showcasing the massive fixed rear wing and the iconic continuous LED tail light strip. The shot is taken at night under urban streetlights, creating high-contrast reflections and a cinematic, high-speed atmosphere. Deep blacks and vibrant red lighting dominate the scene."
+              class="bg-cover bg-center rounded-xl border border-white/5" id="issbesm"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main><!-- Footer -->
+  <script>
+    // Simple scroll interaction for the navigation bar
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                nav.classList.add('bg-surface/90');
+                nav.classList.remove('bg-surface/60');
+            } else {
+                nav.classList.add('bg-surface/60');
+                nav.classList.remove('bg-surface/90');
+            }
+        });
+
+        // Entrance animation logic
+        document.addEventListener('DOMContentLoaded', () => {
+            const revealElements = document.querySelectorAll('.reveal-text');
+            revealElements.forEach((el, index) => {
+                el.style.animationDelay = `${index * 0.2}s`;
+            });
+        });
+  </script>
+</body>
+
+</html>
