@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+
+<head>
+  <title>Home</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="index,follow">
+  <meta name="generator" content="GrapesJS Studio">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block"
+    rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script id="tailwind-config">
+    try{
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "inverse-surface": "#e5e2e1",
+                    "surface": "#131313",
+                    "on-error": "#690005",
+                    "on-primary-fixed": "#410004",
+                    "secondary": "#c8c6c5",
+                    "on-primary": "#68000a",
+                    "error": "#ffb4ab",
+                    "inverse-on-surface": "#313030",
+                    "on-surface-variant": "#e4beba",
+                    "surface-bright": "#393939",
+                    "surface-container-lowest": "#0e0e0e",
+                    "on-tertiary-container": "#00285d",
+                    "outline": "#ab8986",
+                    "tertiary-fixed-dim": "#adc6ff",
+                    "on-primary-container": "#5c0008",
+                    "on-secondary-fixed-variant": "#474746",
+                    "secondary-fixed-dim": "#c8c6c5",
+                    "surface-container-low": "#1c1b1b",
+                    "on-primary-fixed-variant": "#930013",
+                    "secondary-container": "#474746",
+                    "on-background": "#e5e2e1",
+                    "surface-dim": "#131313",
+                    "on-surface": "#e5e2e1",
+                    "primary": "#ffb3ad",
+                    "on-secondary": "#313030",
+                    "background": "#131313",
+                    "primary-fixed": "#ffdad7",
+                    "secondary-fixed": "#e5e2e1",
+                    "surface-tint": "#ffb3ad",
+                    "surface-container-high": "#2a2a2a",
+                    "on-tertiary-fixed-variant": "#004395",
+                    "tertiary": "#adc6ff",
+                    "on-secondary-fixed": "#1c1b1b",
+                    "on-secondary-container": "#b7b5b4",
+                    "tertiary-container": "#4d8eff",
+                    "on-tertiary-fixed": "#001a42",
+                    "surface-variant": "#353534",
+                    "primary-container": "#ff5451",
+                    "surface-container": "#201f1f",
+                    "primary-fixed-dim": "#ffb3ad",
+                    "error-container": "#93000a",
+                    "surface-container-highest": "#353534",
+                    "tertiary-fixed": "#d8e2ff",
+                    "outline-variant": "#5b403e",
+                    "on-tertiary": "#002e6a",
+                    "inverse-primary": "#b91a24",
+                    "on-error-container": "#ffdad6"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "base": "8px",
+                    "margin-desktop": "64px",
+                    "gutter": "24px",
+                    "container-max": "1440px",
+                    "margin-mobile": "20px"
+            },
+            "fontFamily": {
+                    "body-md": ["Inter"],
+                    "label-sm": ["Inter"],
+                    "display-lg-mobile": ["Montserrat"],
+                    "headline-xl": ["Montserrat"],
+                    "display-lg": ["Montserrat"],
+                    "body-lg": ["Inter"],
+                    "headline-lg": ["Montserrat"]
+            },
+            "fontSize": {
+                    "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                    "label-sm": ["12px", {"lineHeight": "1", "letterSpacing": "0.1em", "fontWeight": "600"}],
+                    "display-lg-mobile": ["40px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "headline-xl": ["48px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                    "display-lg": ["72px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "headline-lg": ["32px", {"lineHeight": "1.3", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    }catch(_e){}
+  </script>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+    }
+
+    :root {
+      --gjs-t-color-primary: #cf549e;
+      --gjs-t-color-secondary: #b9227d;
+      --gjs-t-color-accent: #ffb347;
+      --gjs-t-color-success: #28a745;
+      --gjs-t-color-warning: #ffc107;
+      --gjs-t-color-error: #dc3545;
+    }
+
+    body {
+      background-color: #e7e7e7;
+      font-family: system-ui, sans-serif;
+    }
+
+    .head {
+      padding: 50px 50px 35px;
+    }
+
+    .logo {
+      height: 50px;
+      display: block;
+      margin: 0 auto;
+    }
+
+    .card {
+      max-width: 700px;
+      padding: 40px 45px;
+      background-color: white;
+      border-radius: 15px;
+      margin: 0 auto;
+    }
+
+    .title {
+      margin: 0;
+      text-align: center;
+    }
+
+    .gjs-t-body {
+      background-color: inherit;
+      color: inherit;
+      font-size: 1rem;
+      line-height: 1.75rem;
+    }
+
+    .subtitle {
+      text-align: center;
+      margin: 0;
+      padding: 25px 0;
+    }
+
+    .paragraph {
+      line-height: 1.5;
+      margin-bottom: 40px;
+    }
+
+    .link {
+      color: #af4e8a;
+      text-decoration: none;
+      font-size: 13px;
+    }
+
+    .footer {
+      margin-top: 30px;
+      text-align: center;
+    }
+
+    .gjs-t-h1 {
+      color: var(--gjs-t-color-secondary);
+      font-size: 1.5rem;
+      line-height: 2.5rem;
+    }
+
+    .button {
+      display: block;
+      padding: 0.5rem 1rem;
+      text-decoration: none;
+      text-align: center;
+      border-width: 0;
+    }
+
+    .gjs-t-h2 {
+      color: #601843;
+      font-size: 1.2rem;
+      line-height: 1.75rem;
+    }
+
+    .gjs-t-button {
+      background-color: var(--gjs-t-color-primary);
+      color: white;
+      border-radius: 0.3rem;
+    }
+
+    .gjs-t-link {
+      color: var(--gjs-t-color-primary);
+      text-decoration: underline;
+    }
+
+    .gjs-t-border {
+      border-radius: 0.3rem;
+      border-color: #e0e0e0;
+    }
+
+    #i4k3q {
+      background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCvnlflvOpSdQmoMEv_S_g-WLyhAoYMDAB_1V3aq1PCBUGAO1h-cXJObrG5clFxVFdiVNZkkAAisY3-V31nQxhVaf7fxGTylc99ehsMGTtwwnbSL_mqtEAPFpBxsowSgWrlEMR2W2jfh8n_5CIyvPBZIhJWBrt9r7IJTvFNWJWRbbMiZmWT-NZ41Np-sf_IAvZZmHzf32fXyI4utkcK_cn51vUkGXIvxr1q5sqz4gwYAc9d61dZecZcAbBUfXx1EGpicvZcIkHFxpo-");
+    }
+
+    #ipem88 {
+      background-image: url('https://images.unsplash.com/photo-1614162692292-7ac56d7f7f1e?q=80&w=2070&auto=format&fit=crop');
+    }
+
+    #i3ghsf {
+      transition-delay: 100ms;
+    }
+
+    #i3sqej {
+      background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDAbHWceU5re1wAQXd1-u9swjF_ZAHKxI19_f4LM3JiWFJgdkBOZDK-32uQa5zzmvmpqAvKwoZbWNHOETl_6Gb-j4Ou_Pr6SVZrCy7AN3iDjo-ZKjU0II3G5u8XzU_mkaecVL_DF1WwtnC1tQWXLbqMYmRRuQyQrfAv6ln_ruLEGHT0PMTAH9fwSRx0blPGIg_YN6Fhq0O88poQk0BJnUa0QFZNQUq6Liw3tKfTpQSfQPoY15aACRjYpe3FececlP8d_zMRPCxpSaL_");
+    }
+
+    #idxf2a {
+      transition-delay: 200ms;
+    }
+
+    #igipe7 {
+      background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBvx-Nt8M068nslsbUGlMYJehOSq4TOK-F9HqOgW35np95PYIcOB-xCg-Evg-cqncfutUEcSheAyevaMipTt24yicSPUewj_p0ezcwWvG99Qb7x1nS3z9A-BIdokFASTDL9bR76mln2-GZjQ6EGgY8IHPVJbHV7UNzfyISvYDXg1Rqpy6sEmidatdumdXMjzxFZa5KQzUIeI9GYoheKavz6LVm-BJfx3JbRrUMgNHlQlJAW_LmO55cs6yDGOXJIDbzpjbPVTtOIrCKf");
+    }
+
+    #i57rxn {
+      transition-delay: 300ms;
+    }
+
+    #i3ayz2 {
+      background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAnGcwa44zlVJtPrSVP71GUgTUuabV2yAXupCdSUjShzUuza-79YgdvqcW7ZJeJ9gsF05ERJmWsiR1Of14x6Om58G4cpXbDB6gTdlTlTdxp_XOSx5d7_ydLj7HMied5i70puobUNUmJmg4T57_-Y0j5eMalU_sQqNAED8DGtucu47noOtUjmXyIrQcPdShGMO1hLO5qxCa03jNPfqMXOFiT2CbMT9Po_PBzl80VGgqvoiZLolplN7-M8pOoPz2JDS4os9u39hMPPOKY");
+    }
+
+    #iq56x1 {
+      transition-delay: 400ms;
+    }
+
+    #i44rnh {
+      background-image: url('https://images.unsplash.com/photo-1614162692292-7ac56d7f7f1e?q=80&w=2070&auto=format&fit=crop');
+    }
+  </style>
+</head>
+
+<body class="font-body-md text-on-surface selection:bg-primary-container selection:text-on-primary" id="ik6i">
+  <!-- TopNavBar -->
+  <header
+    class="sticky top-0 w-full z-50 bg-surface/60 backdrop-blur-xl border-b border-white/10 shadow-2xl shadow-primary/5 h-20">
+    <nav class="flex justify-between items-center max-w-container-max mx-auto px-5 md:px-margin-desktop h-full" id="ingok">
+      <div class="font-headline-lg text-headline-lg tracking-tighter text-on-surface">
+        DriveHub</div>
+      <div class="flex flex-wrap items-center gap-4 md:gap-10"><a href="index.html"
+          class="text-primary font-bold border-b-2 border-primary pb-1 font-body-md text-body-md" id="insg6">Home</a><a
+          href="cars.html"
+          class="text-on-surface/70 hover:text-on-surface transition-colors duration-300 font-body-md text-body-md nav-underline"
+          id="islcj">Cars</a>
+          <a href="bikes.html"
+          class="text-on-surface/70 hover:text-on-surface transition-colors duration-300 font-body-md text-body-md nav-underline"
+          id="iqzpt">Bikes</a>
+          
+          <a href="about.html"
+          class="text-on-surface/70 hover:text-on-surface transition-colors duration-300 font-body-md text-body-md nav-underline"
+          id="ifeai">About</a><a href="contactus.html"
+          class="text-on-surface/70 hover:text-on-surface transition-colors duration-300 font-body-md text-body-md nav-underline"
+          id="iqzpt">Contact</a>
+          
+          
+        </div>
+    </nav>
+  </header>
+  <main>
+    <!-- Hero Section -->
+    <section class="relative w-full min-h-screen overflow-hidden">
+      <div class="absolute inset-0 z-0">
+        <div
+          data-alt="A cinematic, low-angle shot of a sleek, modern high-performance sports car in a deep obsidian black. The vehicle is parked on a wet, dark asphalt track at night, with neon red city lights reflecting off its polished carbon fiber body. The lighting is dramatic and moody, focusing on the sharp aerodynamic curves and aggressive LED headlights. The overall aesthetic is exclusive, powerful, and technologically advanced, mimicking a premium dark-mode luxury automotive advertisement."
+          class="w-full h-full bg-cover bg-center" id="i4k3q"></div>
+        <div class="absolute inset-0 hero-gradient"></div>
+      </div>
+      <div
+        class="relative z-10 flex flex-col justify-center items-start h-full max-w-container-max mx-auto px-5 md:px-margin-desktop"
+        id="iwuoi">
+        <div class="max-w-3xl space-y-6"><span class="inline-block px-4 py-1 border border-primary/30 text-primary font-label-sm text-label-sm tracking-[0.2em] uppercase rounded-full bg-primary/5">
+                        Performance Redefined
+                    </span>
+          <h1 class="font-display-lg text-4xl md:text-display-lg leading-tight break-words">
+            Engineered for <br/><span class="text-primary">Excellence</span></h1>
+          <p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl">
+            Discover the world's most prestigious vehicles, where cutting-edge technology meets unparalleled luxury
+            craftsmanship. Experience the pinnacle of automotive engineering.
+          </p>
+          <div class="pt-8 flex gap-4"><button type="button" class="racing-red-btn px-10 py-4 rounded-lg font-bold text-white text-lg flex items-center gap-2 group">
+                            Explore Cars
+                            <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span></button>
+          </div>
+        </div>
+      </div>
+    </section><!-- Stats Section -->
+    <section class="py-12 md:py-20 bg-surface-container-lowest">
+      <div class="max-w-container-max mx-auto px-margin-desktop grid grid-cols-2 md:grid-cols-4 gap-gutter reveal">
+        <div class="space-y-2">
+          <div class="text-primary font-headline-xl text-headline-xl">750+</div>
+          <div class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-widest">Horsepower</div>
+        </div>
+        <div class="space-y-2">
+          <div class="text-primary font-headline-xl text-headline-xl">215</div>
+          <div class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-widest">Top Speed MPH</div>
+        </div>
+      </div>
+    </section><!-- Featured Vehicles Section -->
+    <section class="py-16 md:py-32 bg-surface" id="iywagr">
+      <div class="max-w-container-max mx-auto px-margin-desktop mb-16 flex justify-between items-end reveal">
+        <div>
+          <h2 class="font-headline-xl text-headline-xl mb-4">Featured Vehicles</h2>
+          <p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl">A curated selection of our current
+            masterpieces, each representing the zenith of their respective categories.</p>
+        </div><a href="#" class="hidden md:flex items-center gap-2 text-primary font-bold hover:gap-4 transition-all">
+          View Entire Collection <span class="material-symbols-outlined">chevron_right</span></a>
+      </div>
+      <div class="max-w-container-max mx-auto px-margin-desktop grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div class="glass-card group rounded-xl overflow-hidden reveal" id="i3ghsf">
+          <div class="h-52 md:h-64 overflow-hidden relative">
+            <div
+              data-alt="A stunning side profile of a Porsche 911 GT3 in Shark Blue. The car is parked on a coastal road at dusk, with the ocean and a deep orange sunset in the background. The lighting is soft and warm, accentuating the iconic silhouette and the large rear wing. The aesthetic is pure, emotional, and high-performance."
+              class="w-full h-full bg-cover bg-center transition-transform duration-700 group-hover:scale-110"
+              id="ipem88"></div>
+            <div
+              data-alt="A stunning side profile of a Porsche 911 GT3 in Shark Blue. The car is parked on a coastal road at dusk, with the ocean and a deep orange sunset in the background. The lighting is soft and warm, accentuating the iconic silhouette and the large rear wing. The aesthetic is pure, emotional, and high-performance."
+              class="w-full h-full bg-cover bg-center transition-transform duration-700 group-hover:scale-110"
+              id="i44rnh"></div>
+          </div>
+          <div class="p-5 md:p-8 space-y-4">
+            <div>
+              <h3 class="font-headline-lg text-headline-lg mb-1" id="i7c6be">Porsche 911 GT3</h3>
+              <p class="font-body-md text-body-md text-on-surface-variant" id="i3nsut">The Icon of Performance</p>
+            </div>
+            <div class="h-px bg-white/10 w-full"></div>
+            <div class="flex justify-between items-center"></div>
+          </div>
+        </div><!-- Porsche 911 -->
+        <!-- Audi R8 -->
+        <div class="glass-card group rounded-xl overflow-hidden reveal" id="idxf2a">
+          <div class="h-52 md:h-64 overflow-hidden relative">
+            <div
+              data-alt="A professional front-quarter view of an Audi R8 V10 Performance in matte Suzuka Gray. The vehicle is positioned in a modern concrete architectural space with dramatic shadows and sharp lines. The lighting highlights the carbon fiber side blades and the signature LED headlight signature. The atmosphere is cold, industrial, and high-tech, aligning with the dark, minimalist aesthetic of the showroom."
+              class="w-full h-full bg-cover bg-center transition-transform duration-700 group-hover:scale-110"
+              id="i3sqej"></div>
+          </div>
+          <div class="p-5 md:p-8 space-y-4">
+            <div>
+              <h3 class="font-headline-lg text-headline-lg mb-1">Audi R8</h3>
+              <p class="font-body-md text-body-md text-on-surface-variant" id="ij2g0j">V10 Performance Quattro</p>
+            </div>
+            <div class="h-px bg-white/10 w-full"></div>
+            <div class="flex justify-between items-center">
+
+
+            </div>
+          </div>
+        </div><!-- BMW M4 -->
+        <div class="glass-card group rounded-xl overflow-hidden reveal" id="i57rxn">
+          <div class="h-52 md:h-64 overflow-hidden relative">
+            <div
+              data-alt="A dynamic action shot of a BMW M4 Competition in Isle of Man Green metallic. The car is carving through a winding mountain road during twilight. The headlights are on, casting a warm glow on the pavement, while the sky is a deep, dark indigo. The focus is sharp on the car's aggressive front grille and hood vents. The aesthetic is fast-paced, luxurious, and technologically advanced."
+              class="w-full h-full bg-cover bg-center transition-transform duration-700 group-hover:scale-110"
+              id="igipe7"></div>
+          </div>
+          <div class="p-5 md:p-8 space-y-4">
+            <div>
+              <h3 class="font-headline-lg text-headline-lg mb-1">BMW M4</h3>
+              <p class="font-body-md text-body-md text-on-surface-variant">Competition xDrive</p>
+            </div>
+            <div class="h-px bg-white/10 w-full"></div>
+            <div class="flex justify-between items-center">
+
+
+            </div>
+          </div>
+        </div><!-- Mercedes-AMG GT -->
+        <div class="glass-card group rounded-xl overflow-hidden reveal" id="iq56x1">
+          <div class="h-52 md:h-64 overflow-hidden relative">
+            <div
+              data-alt="A close-up artistic shot of a Mercedes-AMG GT Black Series in Magno Graphite Gray. The image focuses on the intricate carbon fiber details of the rear diffuser and the massive rear wing. The lighting is moody and directional, creating high-contrast highlights on the car's aggressive bodywork. The background is a dark, out-of-focus garage setting. The style is cinematic, emphasizing engineering precision and nocturnal elegance."
+              class="w-full h-full bg-cover bg-center transition-transform duration-700 group-hover:scale-110"
+              id="i3ayz2"></div>
+          </div>
+          <div class="p-5 md:p-8 space-y-4">
+            <div>
+              <h3 class="font-headline-lg text-headline-lg mb-1">AMG GT</h3>
+              <p class="font-body-md text-body-md text-on-surface-variant">Black Series Edition</p>
+            </div>
+            <div class="h-px bg-white/10 w-full"></div>
+            <div class="flex justify-between items-center">
+
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section><!-- -->
+  </main><!-- Footer -->
+  <script>
+    // Scroll reveal animation logic
+        function reveal() {
+            var reveals = document.querySelectorAll(".reveal");
+            for (var i = 0; i < reveals.length; i++) {
+                var windowHeight = window.innerHeight;
+                var elementTop = reveals[i].getBoundingClientRect().top;
+                var elementVisible = 150;
+                if (elementTop < windowHeight - elementVisible) {
+                    reveals[i].classList.add("active");
+                }
+            }
+        }
+
+        window.addEventListener("scroll", reveal);
+
+        // Run once on load
+        document.addEventListener("DOMContentLoaded", reveal);
+
+        // Simple parallax effect for hero background
+        window.addEventListener('scroll', function() {
+            const scroll = window.pageYOffset;
+            const heroBg = document.querySelector('[data-alt*="high-performance sports car"]');
+            if (heroBg) {
+                heroBg.style.transform = `translateY(${scroll * 0.4}px)`;
+            }
+        });
+  </script>
+</body>
+
+</html>
